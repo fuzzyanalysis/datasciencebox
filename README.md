@@ -1,3 +1,10 @@
+# [Data Science Box](http://www.datasciencebox.com)
+
+Data Science Box is a simple server dedicated to simplifying common data science tasks.
+
+The web site is based on the HTML5 Boilerplate, Bootstrap, JQuery, HTML5 and CSS3 frameworks.
+
+
 # [HTML5 Boilerplate](https://html5boilerplate.com)
 
 [![Build Status](https://travis-ci.org/h5bp/html5-boilerplate.svg)](https://travis-ci.org/h5bp/html5-boilerplate)
