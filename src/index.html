@@ -117,51 +117,52 @@
 
         <hr/>
 
-        <table class="table table-striped">
+        <div id="infotable" class="table-responsive">
+            <table class="table table-striped">
 
-            <tbody><div id="ip"></div></tbody>
-            <tr>
-                <div id="ip"></div>
-            </tr>
-            <tr>
-                <div id="city"></div>
-            </tr>
-            <tr>
-                <div id="region"></div>
-            </tr>
-            <tr>
-                <div id="country"></div>
-            </tr>
-            <tr>
-                <div id="postal"></div>
-            </tr>
-            <tr>
-                <div id="hostname"></div>
-            </tr>
-            <tr>
-                <div id="location"></div>
-            </tr>
-            <tr>
-                <div id="organisation"></div>
-            </tr>
-            <tr>
-                <div id="platform"></div>
-            </tr>
-            <tr>
-                <div id="userAgent"></div>
-            </tr>
-            <tr>
-                <div id="apCodeName"></div>
-            </tr>
-            <tr>
-                <div id="appName"></div>
-            </tr>
-            <tr>
-                <div id="appVersion"></div>
-            </tr>
-            </tbody>
+                <tr class="success">
+                    <div id="ip"></div>
+                </tr>
+                <tr>
+                    <div id="city"></div>
+                </tr>
+                <tr>
+                    <div id="region"></div>
+                </tr>
+                <tr>
+                    <div id="country"></div>
+                </tr>
+                <tr>
+                    <div id="postal"></div>
+                </tr>
+                <tr>
+                    <div id="hostname"></div>
+                </tr>
+                <tr>
+                    <div id="location"></div>
+                </tr>
+                <tr>
+                    <div id="organisation"></div>
+                </tr>
+                <tr>
+                    <div id="platform"></div>
+                </tr>
+                <tr>
+                    <div id="userAgent"></div>
+                </tr>
+                <tr>
+                    <div id="apCodeName"></div>
+                </tr>
+                <tr>
+                    <div id="appName"></div>
+                </tr>
+                <tr>
+                    <div id="appVersion"></div>
+                </tr>
+                </tbody>
 
-        </table>
+            </table>
+        </div>
         <!--<hr/>Full response: <pre id="details"></pre>-->
 
         <div id="ipinfo"></div>
@@ -197,9 +198,9 @@
                 document.writeln("Cookie Information: " + document.cookie + "<br/>");
                 document.writeln("Language: " + navigator.language);
                 document.writeln("Online: " + navigator.onLine);
-                for(var i in navigator.plugins){
+                for (var i in navigator.plugins) {
                     document.writeln(navigator.plugins[i].name + ": ");
-                    document.writeln(navigator.plugins[i].description + "<br/>" );
+                    document.writeln(navigator.plugins[i].description + "<br/>");
                 }
                 document.writeln("Java Enabled: " + navigator.javaEnabled());
                 document.writeln("Taint Enabled: " + navigator.taintEnabled());
