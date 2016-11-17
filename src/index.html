@@ -56,62 +56,62 @@
 
     <div class="row marketing">
         <div class="col-lg-6">
-            <h4><a href="http://www.datasciencebox.com/drupal">Drupal</a></h4>
+            <h4><a href="http://www.louix.pro/drupal">Drupal</a></h4>
 
-            <p>An instance of Drupal to play around with.</p>
+            <p>A free and open-source content-management framework written in PHP and distributed under the GNU General Public License.  </p>
 
-            <h4><a href="http://www.datasciencebox.com/node">Node.js</a></h4>
+            <h4><a href="http://www.louix.pro/node">Node.js</a></h4>
 
             <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet
                 fermentum.</p>
 
-            <h4><a href="http://www.datasciencebox.com:4000">Python web services</a></h4>
+            <h4><a href="http://www.louix.pro:4000">Python web services</a></h4>
 
             <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
 
-            <h4><a href="http://www.datasciencebox.com:8089">Jenkins</a></h4>
+            <h4><a href="http://www.louix.pro:8089">Jenkins</a></h4>
 
             <p>Jenkins is an open-source, freely-available continuous integration server.</p>
 
-            <h4><a href="http://www.datasciencebox.com:10000">Webmin</a></h4>
+            <h4><a href="http://www.louix.pro:10000">Webmin</a></h4>
 
             <p>Webmin allows users to manage web servers from a web application UI.</p>
         </div>
 
         <div class="col-lg-6">
-            <h4><a href="http://www.datasciencebox.com/mediawiki">MediaWiki</a></h4>
+            <h4><a href="http://www.louix.pro/mediawiki">MediaWiki</a></h4>
 
             <p>Mediwiki is a leading, freely-available wiki that sites such as Wikipedia are based upon.</p>
 
-            <h4><a href="http://www.datasciencebox.com/angularjs">AngularJS</a></h4>
+            <h4><a href="http://www.louix.pro/angularjs">AngularJS</a></h4>
 
             <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet
                 fermentum.</p>
 
-            <h4><a href="http://www.datasciencebox.com:8080">JIRA</a></h4>
+            <h4><a href="http://www.louix.pro:8080">JIRA</a></h4>
 
             <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
 
-            <h4><a href="http://www.datasciencebox.com:8088">JBoss</a></h4>
+            <h4><a href="http://www.louix.pro:8088">JBoss</a></h4>
 
             <p>JBoss is an application server, much like Tomcat and Jetty, for hosting web applications.</p>
 
-            <h4><a href="http://www.datasciencebox.com:8077">Jetty</a></h4>
+            <h4><a href="http://www.louix.pro:8077">Jetty</a></h4>
 
             <p>Jetty is Jetty provides a Web server and javax.servlet container, plus support for SPDY, WebSocket, OSGi,
                 JMX, JNDI, JAAS and many other integrations. These components are open source and available for
                 commercial use and distribution.</p>
 
-            <h4><a href="http://www.datasciencebox.com/html/src/websocket.html">Websockets</a></h4>
+            <h4><a href="http://www.louix.pro/html/src/websocket.html">Websockets</a></h4>
 
-            <p>Websockets are </p>
+            <p>Websockets are "socket" connections between a web brosser and a server.  With a websocket, there is a persistent connection between the client and the server, and both parties can send data to one another at any time.</p>
 
 
         </div>
 
     </div>
 
-    <div id="userinfo" class="jumbotron">
+    <div id="userinfo">
 
         <h3>Your Information</h3>
 
@@ -159,8 +159,24 @@
                 <tr>
                     <div id="appVersion"></div>
                 </tr>
-                </tbody>
-
+                <tr>
+                    <div id="cookieEnabled"></div>
+                </tr>
+                <tr>
+                    <div id="cookie"></div>
+                </tr>
+                <tr>
+                    <div id="language"></div>
+                </tr>
+                <tr>
+                    <div id="onLine"></div>
+                </tr>
+                <tr>
+                    <div id="plugins"></div>
+                </tr>
+                <tr>
+                    <div id="javaEnabled"></div>
+                </tr>
             </table>
         </div>
         <!--<hr/>Full response: <pre id="details"></pre>-->
@@ -194,16 +210,17 @@
                 $('#appCodeName').html("App Code Name: " + navigator.appCodeName);
                 $('#appName').html("App Name: " + navigator.appName);
                 $('#appVersion').html("App Version: " + navigator.appVersion);
-                document.writeln("Cookies enabled: " + navigator.cookieEnabled);
-                document.writeln("Cookie Information: " + document.cookie + "<br/>");
-                document.writeln("Language: " + navigator.language);
-                document.writeln("Online: " + navigator.onLine);
+                $('#cookieEnabled').html("Cookie enabled: " + navigator.cookieEnabled);
+                $('#cookie').html("Cookie: " + navigator.cookie);
+                $('#language').html("Language: " + navigator.language);
+                $('#online').html("Online: " + navigator.onLine);
+                var plugins = "Plugins: <br/>";
                 for (var i in navigator.plugins) {
-                    document.writeln(navigator.plugins[i].name + ": ");
-                    document.writeln(navigator.plugins[i].description + "<br/>");
+                    plugins += "  " + navigator.plugins[i].name + ": " + navigator.plugins[i].description + "<br/>";
                 }
-                document.writeln("Java Enabled: " + navigator.javaEnabled());
-                document.writeln("Taint Enabled: " + navigator.taintEnabled());
+                $('#plugins').html(plugins);
+                $('#javaEnabled').html("Java Enabled: " + navigator.javaEnabled());
+
                 /*
                  $.ajax({url: "http://ipinfo.io", async: false, success: function(result) {
                  $("#ipinfo").html(result);
@@ -212,6 +229,9 @@
 
             </script>
         </div>
+
+        <a href="http://www.free-iqtest.net" title="IQ Test"><img src="http://www.free-iqtest.net/images/badges2/l141.gif" width="200" height="100" alt="IQ Test" border="0"></a><br/><a title="IQ Test" href="http://www.free-iqtest.net">IQ Test</a>
+
 
     </div>
 
